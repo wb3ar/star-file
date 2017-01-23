@@ -6,7 +6,6 @@
 - PHP >= 5.5
 - MySQL
 - Sphinx
-- FFmpeg
 - ImageMagick
 - Composer
 
