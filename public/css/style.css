@@ -1,0 +1,196 @@
+body {
+    padding-top: 50px;
+    background: url(stardust_@2X.png);
+}
+
+.navbar-inverse {
+    background-color: #421E75;
+}
+
+.navbar-inverse .navbar-nav>li>a {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.navbar-inverse .navbar-brand {
+    color: white;
+}
+
+.navbar-inverse .form-group {
+    margin-right: 5px;
+}
+
+.image-upload {
+    font-size: 300px;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.6);
+    line-height: 1.2;
+    cursor: default;
+
+}
+
+.form-upload {
+    text-align: center;
+}
+
+.input-upload {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
+
+.input-upload+label, .btn-download {
+    background-color: #421E75;
+    color: white;
+    padding: 15px 21px;
+    border: 1px solid #715E8E;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.input-upload+label {
+  font-size: 1.25em;
+  font-weight: 700;
+}
+
+.input-upload+label:hover, .input-upload:focus+label, .input-upload.has-focus+label, .btn-download:hover, .btn-download:focus {
+    background-color: #4E3277;
+    color: white;
+}
+
+.input-upload+.small {
+  font-size: 1em;
+  padding: 10px 15px;;
+  border-radius: 5px;
+  margin: 0;
+  font-weight: unset;
+  border: none;
+}
+
+.btn-download:hover, .btn-download:focus {
+  text-decoration: none;
+}
+
+.input-upload:active+label, .btn-download:active {
+    background-color: #5C4284;
+}
+
+.btn-download {
+  padding: 7px 21px;
+}
+
+a.btn-download {
+  border: none;
+  border-radius: 5px;
+}
+
+a.btn-download:hover {
+  background-color: #6D4BA0;
+}
+
+.margin-top-bottom-add {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.margin-bottom-disable {
+  margin-bottom: 0;
+}
+
+.date {
+  color: #788084;
+}
+
+.block {
+  display: block;
+  color: #333;
+  padding: 10px 15px;
+}
+
+.block:hover, .block:focus {
+  text-decoration: none;
+}
+
+.color-orange {
+  color: #EDA650;
+}
+
+.block:hover p {
+  color: #333;
+}
+
+.block p {
+  margin-bottom: 0;
+}
+
+.item-file {
+  padding: 0;
+  position: relative;
+}
+
+
+.item-file:hover {
+  background-color: #E3E0FF;
+}
+.focus-border-orange:focus {
+  border-color: #EDA650;
+}
+
+.purple-light, .panel > .purple-light {
+background-color: #E3E0FF;
+}
+
+h1 {
+  font-family: inherit;
+  margin: 0;
+  line-height: 1;
+  font-size: 25px;
+}
+
+.tag-info {
+    text-align: right;
+    padding: 10px;
+}
+
+.tag {
+  position: absolute;
+  bottom: 0;
+}
+
+.padding-add {
+  padding: 10px 5px;
+}
+
+.first-td-border-none tr:first-child td {
+  border: none;
+}
+
+.border-gray {
+  border: 1px solid rgb(221, 221, 221);
+}
+
+.border-none {
+  border: none;
+}
+
+.list-small {
+  margin-bottom: 0;
+  margin-top: 20px;
+}
+.list-small li {
+  padding: 5px 5px;
+}
+
+.padding-none {
+  padding: 0;
+}
+
+.tags {
+  margin-top: 20px;
+}
+
+.video-js {
+  margin: 0 auto;
+}

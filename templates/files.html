@@ -1,0 +1,26 @@
+{% include 'top.html' %}
+<div class='container'>
+    <div class="row">
+{% include 'sidePanel.html' %}
+        <div class="col-xs-9">
+            {% if message1 %}
+            <div class="alert alert-warning margin-top-bottom-add clearfix tag-info" role="alert">
+                <h1 class="pull-left">{{message1}}</h1> <small><span class="glyphicon glyphicon-file" aria-hidden="true"></span> {{message2}}</small>
+            </div>
+            {% endif %}
+            <ul class="list-group margin-top-bottom-add">
+                {% for file in files %}
+                <li class="list-group-item item-file">
+                    <a class="block" href="/{{file.getConvertedId()}}">
+                        <span class="date pull-right"><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span> {{file.getDate().format('d.m.Y H:i')}}</span>
+                        <strong>{{file.getName}}</strong>
+                        {% if file.description %}
+                        <p>{{file.description}}</p>
+                        {% endif %}
+                    </a>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+    {% include 'bottom.html' %}

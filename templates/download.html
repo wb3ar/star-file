@@ -1,0 +1,57 @@
+{% include 'top.html' %}
+<div class='container'>
+    <div class="row">
+        <div class="col-xs-8 col-xs-offset-2">
+            <div class="panel panel-default margin-top-bottom-add">
+                <div class="panel-heading purple-light">
+                    <h1 class="panel-title">{{file.getName}}</h1>
+                </div>
+                {% if description %}
+                <div class="panel-body">
+                    {% if file.getHavePreview %}
+                    <div class="text-center"><img src="{{file.getPreviewPath}}" alt="{{file.getName}}"></div>
+                    {% endif %}
+                    <p>{{file.getDescription}}</p>
+                </div>
+                {% endif %}
+                <ul class="list-group">
+                    <li class="list-group-item border-none">
+                        <div class="row">
+                            <div class="col-xs-10 col-xs-offset-1 padding-none">
+                                <span>Загружен: {{file.getDate.format('d.m.Y H:i')}}</span><span class="pull-right">Размер файла: {{mediaInfo.human_filesize}}</span> {% if mediaInfo.video or mediaInfo.audio %}
+                                <ul class="list-group list-small border-gray">
+                                    {% if mediaInfo.playtime_string %}
+                                    <li class="list-group-item">Длительность<span class="pull-right">{{mediaInfo.playtime_string}}</span></li>
+                                    {% endif %} {% if mediaInfo.video %}
+                                    <li class="list-group-item bold"><strong>Изображение</strong></li>
+                                    {% if mediaInfo.video.format_name %}
+                                    <li class="list-group-item">Формат<span class="pull-right">{{mediaInfo.video.format_name}}</span></li>
+                                    {% endif %} {% if mediaInfo.video.resolution %}
+                                    <li class="list-group-item">Разрешение<span class="pull-right">{{mediaInfo.video.resolution}}</span></li>
+                                    {% endif %} {% if mediaInfo.video.bits_per_sample %}
+                                    <li class="list-group-item">Глубина цвета<span class="pull-right">{{mediaInfo.video.bits_per_sample}}-bit</span></li>
+                                    {% endif %} {% endif %} {% if mediaInfo.audio %}
+                                    <li class="list-group-item"><strong>Звук</strong></li>
+                                    {% if mediaInfo.audio.format_name %}
+                                    <li class="list-group-item">Формат<span class="pull-right">{{mediaInfo.audio.format_name}}</span></li>
+                                    {% endif %} {% if mediaInfo.audio.encoder_options %}
+                                    <li class="list-group-item">Параметры кодировщика<span class="pull-right">{{mediaInfo.audio.encoder_options}}</span></li>
+                                    {% endif %} {% endif %}
+                                </ul>
+                                {% endif %}
+                            </div>
+                        </div>
+                        {% if tags %}
+                        <div class="tags">
+                            {% for tag in tags %}
+                            <a href="tag/{{tag.getId}}"><span class="label label-default">{{tag.getName}}</span></a> {% endfor %}
+                        </div>
+                        {% endif %}
+                    </li>
+                    <li class="list-group-item text-center{% if tags == false %} border-none{% endif %}"><a class="btn-download" href="download/{{convertedID}}"><span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span> Скачать</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+{% include 'bottom.html' %}

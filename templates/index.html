@@ -1,0 +1,10 @@
+{% include 'top.html' %}
+<div class="image-upload">
+    <span class="glyphicon glyphicon-cloud-upload" aria-hidden="true"></span>
+</div>
+<form class="form-upload" enctype="multipart/form-data" method="post">
+    <input id="file" name="newfile" class="input-upload" type="file" onchange="this.form.submit()">
+    <label for="file">Загрузить файл</label>
+</form>
+
+      {% include 'bottom.html' %}

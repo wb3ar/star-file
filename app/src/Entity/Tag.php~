@@ -1,0 +1,18 @@
+<?php
+// src/Product.php
+/**
+  * @Entity @Table(name="tags")
+  **/
+ class Tag
+ {
+     /** @Id @Column(type="integer") @GeneratedValue **/
+   private $id;
+   /** @Column(type="string", unique=true) **/
+   private $name;
+
+   /**
+        * Many Tags have Many Files.
+        * @ManyToMany(targetEntity="File", mappedBy="tags")
+        */
+   private $files;
+ }

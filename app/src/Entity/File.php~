@@ -1,0 +1,31 @@
+<?php
+/**
+ * @Entity @Table(name="files")
+ **/
+class File
+{
+    /** @Id @Column(type="integer") @GeneratedValue **/
+    private $id;
+    /** @Column(type="string") **/
+    private $name;
+    /** @Column(type="datetime") **/
+    private $date;
+    /** @Column(type="string", length=510, nullable=true) **/
+    private $description;
+
+    private $dirPath;
+
+    /**
+     * Many Files have Many Tags.
+     *
+     * @var Collection
+     * @ManyToMany(targetEntity="Tag")
+     */
+
+     /**
+ * Many Files have Many Tags.
+ * @ManyToMany(targetEntity="Tag", inversedBy="files")
+ * @JoinTable(name="files_tags")
+ */
+    private $tags;
+}

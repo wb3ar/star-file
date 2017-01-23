@@ -1,0 +1,35 @@
+{% include 'top.html' %}
+<div class='container'>
+    <div class="row">
+        <div class="col-xs-8 col-xs-offset-2">
+            <div class="panel panel-default margin-top-bottom-add">
+                <div class="panel-heading">{{fileName}}</div>
+                <form method="post" action="/{{convertedID}}">
+                    <ul class="list-group margin-bottom-disable">
+                        <li class="list-group-item">
+                            <div class="row form-group">
+                                <div class="col-xs-3 control-label"><label class="text optional" for="link">Ссылка на файл</label></div>
+                                <div class="col-xs-9"><input id="link" readonly type="text" class="form-control" value="{{scheme}}://{{host}}/{{convertedID}}"></div>
+                            </div>
+                        </li>
+                        <li class="list-group-item">
+                            <div class="row form-group">
+                                <div class="col-xs-3 control-label"><label class="text optional" for="description">Описание</label></div>
+                                <div class="col-xs-9">
+                                    <textarea id="description" name="description" class="form-control" rows="5"></textarea>
+                                </div>
+                                <div class="col-xs-3 control-label"><label class="text optional" for="tags">Теги</label></div>
+                                <div class="col-xs-9">
+                                  <input id="tags" name="tags" type="text" class="form-control">
+                                  </div>
+                            </div>
+                        </li>
+                        <li class="list-group-item text-center">
+                            <button class="btn-download" type="submit"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span>&nbsp;Сохранить</button>
+                        </li>
+                    </ul>
+                </form>
+            </div>
+          </div>
+          </div>
+      {% include 'bottom.html' %}
